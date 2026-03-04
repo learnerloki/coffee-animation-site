@@ -91,7 +91,7 @@ public/
 Clone the repository:
 
 ```
-git clone https://github.com/YOUR_USERNAME/coffee-animation-site.git
+git clone https://github.com/learnerloki/coffee-animation-site.git
 ```
 
 Install dependencies:
