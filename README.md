@@ -1,36 +1,174 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☕ Coffee Animation Website
 
-## Getting Started
+A premium coffee landing page built with **Next.js**, featuring a **scroll-driven cinematic frame animation** rendered on an HTML5 canvas.
 
-First, run the development server:
+The hero section uses a sequence of rendered frames to create a smooth, interactive animation controlled entirely by user scrolling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+* 🎬 **Scroll-Driven Animation**
+
+  * Frame-by-frame animation rendered on HTML5 Canvas
+  * Bi-directional scrolling (forward & reverse)
+  * Smooth interpolation using scroll progress
+
+* 🎨 **Modern UI**
+
+  * Premium coffee-themed design
+  * TailwindCSS styling
+  * Elegant typography
+
+* ⚡ **High Performance**
+
+  * Canvas rendering
+  * Frame preloading
+  * Responsive scaling
+
+* 📱 **Fully Responsive**
+
+  * Works across desktop and mobile
+
+---
+
+## 🧠 How the Animation Works
+
+Instead of using a video, the hero animation is built using **image sequences**.
+
+The page listens to scroll progress and maps it to a frame index:
+
+```
+scroll progress → frame index → canvas render
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This allows the animation to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* play forward when scrolling down
+* play backward when scrolling up
+* remain perfectly synced with user interaction
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+* **Framework:** Next.js (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Animation:** Framer Motion
+* **Rendering:** HTML5 Canvas
+* **Deployment:** Vercel / Netlify
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+```
+app/
+   page.tsx
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+components/
+   HeroCanvasAnimation.tsx
+   ProductShowcase.tsx
+   ProductCard.tsx
+   FeatureSection.tsx
+   FinalCTA.tsx
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+data/
+   products.ts
+
+public/
+   frames/
+      frame_1.png
+      frame_2.png
+      ...
+```
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```
+git clone https://github.com/YOUR_USERNAME/coffee-animation-site.git
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run the development server:
+
+```
+npm run dev
+```
+
+Open in your browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🖼 Animation Frames
+
+The animation uses a sequence of PNG images stored in:
+
+```
+/public/frames
+```
+
+Each frame is rendered to the canvas depending on scroll position.
+
+Example:
+
+```
+frame_1.png
+frame_2.png
+frame_3.png
+...
+```
+
+---
+
+## 🎯 Future Improvements
+
+* Full coffee **menu system**
+* **Cart and checkout** functionality
+* **Ingredient customization**
+* Stripe **payment integration**
+* WebP optimization for frame assets
+* WebGL-based animation for even better performance
+
+---
+
+## 📦 Deployment
+
+The project can be deployed easily using:
+
+* Vercel
+* Netlify
+
+Example:
+
+```
+npm run build
+```
+
+---
+
+## 🙌 Credits
+
+Built as an experiment in **scroll-driven web animation** and immersive product landing pages.
+
+Inspired by cinematic product experiences used by brands like Apple and Nike.
+
+---
+
+## 📜 License
+
+MIT License
