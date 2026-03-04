@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  
+  --color-coffee-50: #F5E6D3;
+  --color-coffee-100: #C9B8A0;
+  --color-coffee-500: #5A4034;
+  --color-coffee-800: #3D2820;
+  --color-coffee-900: #2D1810;
+  --color-coffee-950: #1A0F0A;
+  --color-accent: #4F9C8F;
+  --color-star: #FFD700;
+  
+  --color-background: var(--color-coffee-950);
+  --color-foreground: var(--color-coffee-50);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased selection:bg-accent selection:text-coffee-950;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom utility for the cinematic container */
+@layer utilities {
+  .hero-vh {
+    height: 500vh;
+  }
+}

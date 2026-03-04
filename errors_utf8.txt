@@ -1,0 +1,10 @@
+﻿.next/types/validator.ts(42,39): error TS2307: Cannot find module '../../src/app/page.js' or its corresponding type declarations.
+.next/types/validator.ts(57,39): error TS2307: Cannot find module '../../src/app/layout.js' or its corresponding type declarations.
+app/page.tsx(1,33): error TS2307: Cannot find module '@/components/HeroCanvasAnimation' or its corresponding type declarations.
+app/page.tsx(2,29): error TS2307: Cannot find module '@/components/ProductShowcase' or its corresponding type declarations.
+app/page.tsx(3,28): error TS2307: Cannot find module '@/components/FeatureSection' or its corresponding type declarations.
+app/page.tsx(4,22): error TS2307: Cannot find module '@/components/FinalCTA' or its corresponding type declarations.
+components/ProductCard.tsx(5,30): error TS2307: Cannot find module '@/data/products' or its corresponding type declarations.
+components/ProductShowcase.tsx(5,26): error TS2307: Cannot find module '@/data/products' or its corresponding type declarations.
+components/ProductShowcase.tsx(28,36): error TS7006: Parameter 'product' implicitly has an 'any' type.
+components/ProductShowcase.tsx(28,45): error TS7006: Parameter 'index' implicitly has an 'any' type.

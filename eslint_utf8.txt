@@ -1,0 +1,10 @@
+﻿
+C:\Users\LOKESH\Downloads\project frames\components\FeatureSection.tsx
+  33:62  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\LOKESH\Downloads\project frames\components\HeroCanvasAnimation.tsx
+   73:8  warning  React Hook useEffect has missing dependencies: 'frameIndex' and 'renderFrame'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  118:8  warning  React Hook useEffect has a missing dependency: 'renderFrame'. Either include it or remove the dependency array                     react-hooks/exhaustive-deps
+
+Γ£û 3 problems (1 error, 2 warnings)
+
