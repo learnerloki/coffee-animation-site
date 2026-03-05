@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Star, ShoppingBag } from "lucide-react";
 import { type Product } from "@/data/products";
+import { useRouter } from "next/navigation";
+import { useCartStore } from "@/store/cartStore";
 import { motion } from "framer-motion";
 
 interface ProductCardProps {
@@ -10,6 +12,20 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+    const router = useRouter();
+    const addItem = useCartStore((state) => state.addItem);
+
+    const handleAddToCart = () => {
+        addItem({
+            productId: product.id,
+            name: product.title,
+            price: product.price,
+            quantity: 1,
+            image: product.image,
+        });
+        router.push("/cart");
+    };
+
     return (
         <motion.div
             whileHover={{ y: -8 }}
@@ -37,7 +53,10 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 <div className="flex items-center justify-between mt-auto">
                     <span className="text-2xl font-semibold text-coffee-50">${product.price.toFixed(2)}</span>
-                    <button className="flex items-center gap-2 bg-accent hover:bg-accent/90 text-coffee-950 px-5 py-2.5 rounded-full font-medium transition-colors">
+                    <button
+                        onClick={handleAddToCart}
+                        className="flex items-center gap-2 bg-accent hover:bg-accent/90 text-coffee-950 px-5 py-2.5 rounded-full font-medium transition-colors"
+                    >
                         <ShoppingBag className="w-4 h-4" />
                         Add to Cart
                     </button>

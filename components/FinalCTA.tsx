@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function FinalCTA() {
     return (
@@ -38,13 +39,15 @@ export default function FinalCTA() {
                         Experience the art of coffee craftsmanship.
                     </p>
 
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-accent text-coffee-950 text-lg font-semibold px-8 py-4 rounded-full shadow-[0_0_40px_rgba(79,156,143,0.3)] hover:shadow-[0_0_60px_rgba(79,156,143,0.5)] transition-shadow duration-300"
-                    >
-                        Explore Full Menu
-                    </motion.button>
+                    <Link href="/menu">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-accent text-coffee-950 text-lg font-semibold px-8 py-4 rounded-full shadow-[0_0_40px_rgba(79,156,143,0.3)] hover:shadow-[0_0_60px_rgba(79,156,143,0.5)] transition-shadow duration-300"
+                        >
+                            Explore Full Menu
+                        </motion.button>
+                    </Link>
                 </motion.div>
             </div>
 
